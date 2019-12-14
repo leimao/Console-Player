@@ -1,1 +1,10 @@
-Console_Music_Player
+# Console Music Player
+
+Lei Mao
+
+## Introduction
+
+
+## References
+
+
