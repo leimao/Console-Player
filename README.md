@@ -4,9 +4,9 @@ Lei Mao
 
 ## Introduction
 
-The Console Player (CPlayer) was implemented using C++, and the library [`libsndfile`](https://github.com/erikd/libsndfile) and [`libasound`](https://github.com/alsa-project/alsa-lib). It uses `libsndfile` to decode sound files and uses `libasound` to play sound in the hardware. The Console Player library `libcplayer` could be used for other C++ projects, such as games, to play sound in the background asynchronously.
+The Console Player (CPlayer) was implemented using C++, and the library [`libsndfile`](https://github.com/erikd/libsndfile) and [`libasound`](https://github.com/alsa-project/alsa-lib). It uses `libsndfile` to decode audio files and uses `libasound` to play audio in the hardware. The Console Player library `libcplayer` could be used for other C++ projects, such as games, to play audio in the background asynchronously.
 
-The commonly supported sound formats includes `wav`, `ogg`, and `flac`. More effort of [supporting `mp3` in `libsndfile`](https://github.com/erikd/libsndfile/issues/258) is coming from the community.
+The commonly supported audio formats includes `wav`, `ogg`, and `flac`. More effort of [supporting `mp3` in `libsndfile`](https://github.com/erikd/libsndfile/issues/258) is coming from the community.
 
 
 ## Dependencies
@@ -46,17 +46,17 @@ $ sudo make install
 
 ## Usages
 
-### Playing Sound in Console
+### Playing Audio in Console
 
 ```bash
 ./console_player music.wav [loop]
 ```
 
-Add optional argument `loop` if you want to repeat playing the sound file.
+Add optional argument `loop` if you want to repeat playing the audio file.
 
 ### Use CPlayer Library
 
-The `cplayer` library supports playing the sound in the background asynchronously. Please check the header file [`cplayer.h`](src/cplayer.h) and the demo code [`bgm.cpp`](bgm/bgm.cpp) for details.
+The `cplayer` library supports playing the audio in the background asynchronously. Please check the header file [`cplayer.h`](src/cplayer.h) and the demo code [`bgm.cpp`](bgm/bgm.cpp) for details.
 
 ## Demo
 
@@ -67,9 +67,9 @@ $ cmake -DCMAKE_INSTALL_PREFIX=. ..
 $ make
 $ make install
 $ cd bin/
-$ # Play the sound file once.
+$ # Play the audio file once.
 $ ./console_player ../../demo/punch-deck-elegance-in-simplicity.wav
-$ # Loop playing the sound file.
+$ # Loop playing the audio file.
 $ ./console_player ../../demo/BIS1536-001-flac-16.flac loop
 ```
 
