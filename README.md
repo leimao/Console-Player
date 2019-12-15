@@ -56,7 +56,7 @@ Add optional argument `loop` if you want to repeat playing the sound file.
 
 ### Use CPlayer Library
 
-The `cplayer` library supports playing the sound in the background asynchronously. Please check the header file [`cplayer.h`](src/cplayer.h) and the demo code [`bgm.cpp`](bgm.cpp) for details.
+The `cplayer` library supports playing the sound in the background asynchronously. Please check the header file [`cplayer.h`](src/cplayer.h) and the demo code [`bgm.cpp`](bgm/bgm.cpp) for details.
 
 ## Demo
 
@@ -75,9 +75,7 @@ $ ./console_player ../../demo/BIS1536-001-flac-16.flac loop
 
 ## References
 
-* [](https://gavv.github.io/articles/decode-play/)
-
-
-* [Royalty Free Music](https://www.free-stock-music.com/punch-deck-elegance-in-simplicity.html)
-* [](https://patrickdearteaga.com/royalty-free-music/)
-* [](https://www.eclassical.com/pages/24-bit-faq.html)
+* [Decoding and Playing Audio Files in Linux](https://gavv.github.io/articles/decode-play/)W
+* [Royalty Free Music - Free Stock Music](https://www.free-stock-music.com/punch-deck-elegance-in-simplicity.html)
+* [Royalty Free Music - Patrick De Arteaga](https://patrickdearteaga.com/royalty-free-music/)
+* [Sample FLAC Music - EClassical](https://www.eclassical.com/pages/24-bit-faq.html)
