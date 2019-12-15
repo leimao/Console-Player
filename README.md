@@ -4,9 +4,9 @@ Lei Mao
 
 ## Introduction
 
-The Console Player (CPlayer) was implemented using C++, and the library [`libsndfile`](https://github.com/erikd/libsndfile) and [`libasound`](https://github.com/alsa-project/alsa-lib). `libsndfile` was used to decode audio files and `libasound` was used to play audio in the hardware. The Console Player library `libcplayer` could be used for other C++ projects, such as games, to play audio in the background asynchronously.
+The Console Player (CPlayer) was implemented using C++, and the library [`libsndfile`](https://github.com/erikd/libsndfile) and [`libasound`](https://github.com/alsa-project/alsa-lib). `libsndfile` was used to decode audio files and `libasound` was used to play audio in the hardware. 
 
-The commonly supported audio formats includes `wav`, `ogg`, and `flac`. More effort of [supporting `mp3` in `libsndfile`](https://github.com/erikd/libsndfile/issues/258) is coming from the community.
+The commonly supported audio formats in CPlayer includes `wav`, `ogg`, and `flac`. More effort of [supporting `mp3` in `libsndfile`](https://github.com/erikd/libsndfile/issues/258) is coming from the community. Additionally, the CPlayer library `libcplayer` could be used for other C++ projects, such as games, to play audio in the background asynchronously.
 
 
 ## Dependencies
