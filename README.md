@@ -80,6 +80,7 @@ $ ./console_player ../../demo/spring-village.ogg loop
 ```bash
 $ ./bgm ../../demo/spring-village.ogg
 ```
+The music would be played 6 times. In the first 3 times, the full audio file would be played. In the last 3 times, the player would receive kill signal from the program, and the audio play would be terminated before its end.
 
 ## References
 
