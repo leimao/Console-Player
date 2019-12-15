@@ -52,7 +52,7 @@ $ sudo make install
 ./console_player audio_file [loop]
 ```
 
-Add optional argument `loop` if you want to repeat playing the audio file.
+Add optional argument `loop` if you want to repeatedly playing the audio file.
 
 ### Use CPlayer Library
 
