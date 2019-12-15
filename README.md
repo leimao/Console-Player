@@ -56,7 +56,7 @@ Add optional argument `loop` if you want to repeat playing the audio file.
 
 ### Use CPlayer Library
 
-The `cplayer` library supports playing the audio in the background asynchronously. Please check the header file [`cplayer.h`](src/cplayer.h) and the demo code [`bgm.cpp`](bgm/bgm.cpp) for details.
+The `libcplayer` library supports playing the audio in the background asynchronously. Please check the header file [`cplayer.h`](src/cplayer.h) and the demo code [`bgm.cpp`](bgm/bgm.cpp) for details.
 
 ## Demo
 
