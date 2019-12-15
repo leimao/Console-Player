@@ -70,7 +70,7 @@ $ cd bin/
 $ # Play the audio file once.
 $ ./console_player ../../demo/punch-deck-elegance-in-simplicity.wav
 $ # Loop playing the audio file.
-$ ./console_player ../../demo/BIS1536-001-flac-16.flac loop
+$ ./console_player ../../demo/spring-village.ogg loop
 ```
 
 ## References
