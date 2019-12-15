@@ -60,6 +60,8 @@ The `libcplayer` library supports playing the audio in the background asynchrono
 
 ## Demo
 
+### Run CPlayer in Console
+
 ```bash
 $ mkdir -p build
 $ cd build
@@ -71,6 +73,12 @@ $ # Play the audio file once.
 $ ./console_player ../../demo/punch-deck-elegance-in-simplicity.wav
 $ # Loop playing the audio file.
 $ ./console_player ../../demo/spring-village.ogg loop
+```
+
+### Run BGM Demo
+
+```bash
+$ ./bgm ../../demo/spring-village.ogg
 ```
 
 ## References
