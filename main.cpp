@@ -1,19 +1,22 @@
 #include "cplayer.h"
 #include <iostream>
 
-int main()
+int main(int argc, char** argv)
 {
-    //CPlayer player("BetterSounds.wav");
+    // Check the number of parameters
+    if (argc < 2) {
+        // Tell the user how to run the program
+        std::cerr << "Usage: " << argv[0] << " sound_file [loop]" << std::endl;
+        return 1;
+    }
     CPlayer player;
-    player.load("BetterSounds.wav");
-    //CPlayer player;
-    //player.load("about_time.wav");
-    //player.load("sawing-wood-daniel_simon.wav");
-    //player.printSoundInfo();
-    //player.play();
-    //player.load("BetterSounds.wav");
-    player.load("ChillingMusic.wav");
-    //std::cout << player.getFilename() << std::endl;
-    //player.play();
-    player.loop();
+    player.load(argv[1]);
+    if (argv[2] && (strcmp(argv[2], "loop") == 0))
+    {
+        player.loop();
+    }
+    else
+    {
+        player.play();
+    }
 }

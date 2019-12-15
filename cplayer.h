@@ -17,6 +17,7 @@ public:
     void load(const char* filename);
     void play() const;
     void loop() const;
+    void playAsync() const;
     const char* getFilename() const;
     void printSoundInfo() const;
 
