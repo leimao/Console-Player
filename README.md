@@ -75,7 +75,7 @@ $ ./console_player ../../demo/BIS1536-001-flac-16.flac loop
 
 ## References
 
-* [Decoding and Playing Audio Files in Linux](https://gavv.github.io/articles/decode-play/)W
+* [Decoding and Playing Audio Files in Linux](https://gavv.github.io/articles/decode-play/)
 * [Royalty Free Music - Free Stock Music](https://www.free-stock-music.com/punch-deck-elegance-in-simplicity.html)
 * [Royalty Free Music - Patrick De Arteaga](https://patrickdearteaga.com/royalty-free-music/)
 * [Sample FLAC Music - EClassical](https://www.eclassical.com/pages/24-bit-faq.html)
