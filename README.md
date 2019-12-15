@@ -49,7 +49,7 @@ $ sudo make install
 ### Playing Audio in Console
 
 ```bash
-./console_player music.wav [loop]
+./console_player audio_file [loop]
 ```
 
 Add optional argument `loop` if you want to repeat playing the audio file.
