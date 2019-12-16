@@ -17,7 +17,7 @@ The commonly supported audio formats in CPlayer includes `wav`, `ogg`, and `flac
 
 ## Installation
 
-## Installation of Dependencies
+### Installation of Dependencies
 
 ```bash
 $ apt-get install libsndfile-dev libasound2

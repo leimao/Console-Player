@@ -25,7 +25,7 @@ int main(int argc, char** argv)
     // Check the number of parameters
     if (argc < 2) {
         // Tell the user how to run the program
-        std::cerr << "Usage: " << argv[0] << " sound_file [loop]" << std::endl;
+        std::cerr << "Usage: " << argv[0] << " sound_file" << std::endl;
         return 1;
     }
 
