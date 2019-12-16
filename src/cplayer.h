@@ -9,10 +9,10 @@ class CPlayer
 {
 public:
     CPlayer();
-    CPlayer(const char* filename);
+    //CPlayer(const char* filename);
     ~CPlayer();
-    void readSoundFile(const char* filename);
-    void setPcm();
+    bool readSoundFile(const char* filename);
+    bool setPcm();
     void releasePcm();
     void load(const char* filename);
     void play();

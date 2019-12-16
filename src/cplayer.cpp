@@ -10,17 +10,19 @@ CPlayer::CPlayer()
     this->mPcm = NULL;
 }
 
+/*
 CPlayer::CPlayer(const char* filename)
 {
     this->readSoundFile(filename);
 }
+*/
 
 CPlayer::~CPlayer()
 {
     this->releasePcm();
 }
 
-void CPlayer::readSoundFile(const char* filename)
+bool CPlayer::readSoundFile(const char* filename)
 {
     this->mFilename = filename;
     this->mSoundFile = sf_open(this->mFilename, SFM_READ, &this->mSoundInfo);
@@ -33,21 +35,37 @@ void CPlayer::readSoundFile(const char* filename)
         this->mDecodedSound.reset(new float[this->mNumFrames * this->mNumChannels]);
         sf_count_t ret = sf_readf_float(this->mSoundFile, this->mDecodedSound.get(), this->mNumFrames);
         sf_close(this->mSoundFile);
+        if (ret == 0) 
+        {
+            return false;
+        }
+        return true;
     }
     else
     {
         sf_close(this->mSoundFile);
         // throw "Unable to read the input file!";
         std::cerr << "Unable to read the input file " << filename << "!" << std::endl;
+        return false;
     }
 }
 
 // setPcm would bring noticeable noise from the speaker.
-void CPlayer::setPcm()
+bool CPlayer::setPcm()
 {
-    snd_pcm_open(&this->mPcm, "default", SND_PCM_STREAM_PLAYBACK, 0);
-    snd_pcm_set_params(this->mPcm, SND_PCM_FORMAT_FLOAT_LE,SND_PCM_ACCESS_RW_INTERLEAVED, this->mNumChannels, this->mSampleRate, 1, this->mSampleRate / 4);
-    snd_pcm_get_params(this->mPcm, &this->mPcmBufferSize, &this->mPcmPeriodSize);
+    if (snd_pcm_open(&this->mPcm, "default", SND_PCM_STREAM_PLAYBACK, 0) < 0)
+    {
+        return false;
+    }
+    if (snd_pcm_set_params(this->mPcm, SND_PCM_FORMAT_FLOAT_LE,SND_PCM_ACCESS_RW_INTERLEAVED, this->mNumChannels, this->mSampleRate, 1, this->mSampleRate / 4))
+    {
+        return false;
+    }
+    if (snd_pcm_get_params(this->mPcm, &this->mPcmBufferSize, &this->mPcmPeriodSize))
+    {
+        return false;
+    }
+    return true;
 }
 
 void CPlayer::releasePcm()
@@ -68,9 +86,14 @@ void CPlayer::load(const char* filename)
 void CPlayer::play()
 {
     this->setPcm();
+    int ret;
     for (int i = 0; i < this->mNumFrames * this->mNumChannels; i += this->mPcmPeriodSize * this->mNumChannels)
     {
-        snd_pcm_writei(this->mPcm, this->mDecodedSound.get() + i, this->mPcmPeriodSize);
+        ret = snd_pcm_writei(this->mPcm, this->mDecodedSound.get() + i, this->mPcmPeriodSize);
+        if (ret < 0)
+        {
+            break;
+        }
     }
 }
 
@@ -78,13 +101,18 @@ void CPlayer::play()
 void CPlayer::playAsync(bool& killSignal)
 {
     this->setPcm();
+    int ret;
     for (int i = 0; i < this->mNumFrames * this->mNumChannels; i += this->mPcmPeriodSize * this->mNumChannels)
     {
         if (killSignal == true)
         {
             break;
         }
-        snd_pcm_writei(this->mPcm, this->mDecodedSound.get() + i, this->mPcmPeriodSize);
+        ret = snd_pcm_writei(this->mPcm, this->mDecodedSound.get() + i, this->mPcmPeriodSize);
+        if (ret < 0)
+        {
+            break;
+        }
     }
 }
 
