@@ -11,16 +11,20 @@ The commonly supported audio formats in CPlayer includes `wav`, `ogg`, and `flac
 
 ## Dependencies
 
-* CMake 3.0.0+
+* CMake 3.13.0+
 * [`libsndfile`](https://github.com/erikd/libsndfile)
 * [`libasound`](https://github.com/alsa-project/alsa-lib)
 
 ## Installation
 
+### Installation of CMake
+
+Check out [the installation guide from Kitware](https://apt.kitware.com/).
+
 ### Installation of Dependencies
 
 ```bash
-$ apt-get install libsndfile-dev libasound2
+$ apt-get install libsndfile-dev libasound2-dev
 ```
 
 ### Installation to Custom Directory (Recommended)
