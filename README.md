@@ -15,6 +15,28 @@ The commonly supported audio formats in CPlayer includes `wav`, `ogg`, and `flac
 * [`libsndfile`](https://github.com/erikd/libsndfile)
 * [`libasound`](https://github.com/alsa-project/alsa-lib)
 
+## Files
+
+```
+.
+├── bgm
+│   ├── bgm.cpp
+│   └── CMakeLists.txt
+├── CMakeLists.txt
+├── demo
+│   ├── BIS1536-001-flac-16.flac
+│   ├── punch-deck-elegance-in-simplicity.wav
+│   └── spring-village.ogg
+├── LICENSE.md
+├── README.md
+└── src
+    ├── CMakeLists.txt
+    ├── cplayer.cpp
+    ├── cplayer.h
+    └── main.cpp
+```
+
+
 ## Installation
 
 ### Installation of CMake
