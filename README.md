@@ -39,6 +39,18 @@ The commonly supported audio formats in CPlayer includes `wav`, `ogg`, and `flac
 
 ## Installation
 
+### Build Docker Image
+
+```bash
+$ docker build -f docker/clayer.Dockerfile --no-cache --tag=clayer:0.0.1 .
+```
+
+### Run Docker Container
+
+```bash
+$ docker run -it --rm --device /dev/snd -v $(pwd):/mnt clayer:0.0.1
+```
+
 ### Installation of CMake
 
 Check out [the installation guide from Kitware](https://apt.kitware.com/).
