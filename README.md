@@ -51,17 +51,17 @@ $ docker build -f docker/clayer.Dockerfile --no-cache --tag=clayer:0.0.1 .
 $ docker run -it --rm --device /dev/snd -v $(pwd):/mnt clayer:0.0.1
 ```
 
-### Installation of CMake
+### Install CMake
 
 Check out [the installation guide from Kitware](https://apt.kitware.com/).
 
-### Installation of Dependencies
+### Install Dependencies
 
 ```bash
 $ apt-get install libsndfile-dev libasound2-dev
 ```
 
-### Installation to Custom Directory (Recommended)
+### Install to Custom Directory (Recommended)
 
 ```bash
 $ mkdir -p build
@@ -71,7 +71,7 @@ $ make
 $ make install
 ```
 
-### Installation to Default Directory
+### Install to Default Directory
 
 ```bash
 $ mkdir -p build
@@ -84,7 +84,7 @@ $ sudo make install
 
 ## Usages
 
-### Playing Audio in Console
+### Play Audio in Console
 
 ```bash
 ./console_player audio_file [loop]
